@@ -59,14 +59,15 @@
         browsertab: browsertab {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LCTRL>
-                , <&macro_tap &kp TAB>
-                , <&macro_release &kp LCTRL>
-                ;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp TAB>,
+                <&macro_release>,
+                <&kp LCTRL>;
         };
     };
-
 
     combos {
         compatible = "zmk,combos";
@@ -180,10 +181,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y    &kp U      &kp I          &kp O    &kp P     &kp BACKSPACE
-&kp LSHFT  &kp A  &kp S  &kp D     &kp F  &kp G        &kp H    &kp J      &kp K          &kp L    &kp SEMI  &kp SQT
-&kp LCTRL  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N    &kp M      &kp COMMA      &kp DOT  &kp FSLH  &kp RSHFT
-                         &kp LGUI  &mo 1  &kp SPACE    &kp RET  &lt 2 TAB  &kp RIGHT_ALT
+&kp ESC           &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y      &kp U      &kp I          &kp O    &kp P     &kp BACKSPACE
+&kp LEFT_CONTROL  &kp A  &kp S  &kp D     &kp F  &kp G        &kp H      &kp J      &kp K          &kp L    &kp SEMI  &kp SQT
+&kp LSHFT         &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N      &kp M      &kp COMMA      &kp DOT  &kp FSLH  &kp ENTER
+                                &kp LGUI  &mo 1  &kp SPACE    &kp SPACE  &lt 2 TAB  &kp RIGHT_ALT
             >;
         };
 
@@ -195,10 +196,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans  &kp N1  &kp N7    &kp N8        &kp N9           &kp N5           &kp N6   &kp N7  &kp N8  &kp N9  &kp N0  &trans
-&trans  &trans  &trans    &kp UP_ARROW  &browsertab           &kp PAGE_UP      &kp N0   &kp N4  &kp N5  &kp N6  &trans  &trans
-&trans  &trans  &kp LEFT  &kp DOWN      &kp RIGHT_ARROW  &kp PAGE_DOWN    &trans   &kp N1  &kp N2  &kp N3  &trans  &trans
-                          &kp LGUI      &trans           &kp SPACE        &kp RET  &trans  &trans
+&kp C_VOLUME_UP    &kp EXCLAMATION  &kp PERCENT  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS    &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp QUESTION  &trans
+&kp C_VOLUME_DOWN  &trans           &trans       &kp UP_ARROW          &browsertab            &none        &kp HASH      &kp N4        &kp N5        &kp N6        &trans        &trans
+&kp LSHIFT         &trans           &kp LEFT     &kp DOWN              &kp RIGHT_ARROW        &none        &trans        &kp N7        &kp NUMBER_8  &kp NUMBER_9  &trans        &trans
+                                                 &kp LGUI              &trans                 &kp SPACE    &kp RET       &trans        &trans
             >;
         };
 
